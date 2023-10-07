@@ -1,0 +1,87 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    padding-block: 3rem;
+}
+.wrapper h1{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-block-end: 3rem;
+}
+
+.images-container{
+    width: 400px;
+    height: 300px;
+    margin-inline: auto;
+    display: flex;
+    position: relative;
+}
+
+.images-container img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+
+.left,
+.right{
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 40px;
+    bottom: 0;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0,0,0,0.05);
+    border: 1px solid transparent;
+    transition: all 300ms ease-in-out;
+}
+
+.left:hover,
+.right:hover{
+    background-color: rgba(0,0,0,0.4);
+}
+
+.left{
+    left: 0px;
+}
+.right{
+    right: 0px;
+}
+
+.dots{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: .5rem;
+}
+.dot{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(0,0,0,0.7);
+    border: 1px solid white;
+    cursor: pointer;
+    transition: 300ms ease-in;
+}
+.dot:hover{
+    background-color: rgb(0,0,0,0.9);
+    scale: 1.1;
+}

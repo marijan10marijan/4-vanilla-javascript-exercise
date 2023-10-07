@@ -1,0 +1,109 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.fullScreen{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 203, 125);
+}
+.fullScreen p{
+    width: min(500px, 90%);
+    line-height: 1.8;
+}
+
+.text{
+    width: min(1100px,90%);
+    margin-inline: auto;
+    margin-block: 6rem;
+}
+.text h1,
+.text h2{
+    text-align: center;
+}
+.text h1{
+    font-size: 3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-block-end: 1.2rem;
+}
+.text h2{
+    margin-block-end: 2.4rem;
+}
+
+.btn{
+    padding: .7rem 1.4rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    background-color: orangered;
+    color: white;
+    border: 1px solid orangered;
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+    cursor: pointer;
+}
+
+.data{
+    width: min(700px, 75%);
+    margin-inline: auto;
+    border-radius: 15px;
+    padding: 3rem 1rem;
+    border: 3px solid black;
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: white;
+    color: black;
+    display: none;
+}
+
+.close-data{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.data h2{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.data a{
+    color: orangered;
+    text-decoration: underline;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-block-end: 1rem;
+}
+.data p{
+    color: rgb(65, 63, 63);
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+}
